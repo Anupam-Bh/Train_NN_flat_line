@@ -7,5 +7,6 @@ Files with tr1,tr2 and tr3 in the names signify creation of NN input for same ba
 Skewness in the input data may be controlled by removing some negative examples in the 'skewness_reduction' block.
 
 The output gives out two MAT files. 
+
 Final_out_1_5000_skewed.mat > NN model with training parameters and performance 
 data_1_5000_skewed.mat > Trainset,Testset, Train-target, Test-target
