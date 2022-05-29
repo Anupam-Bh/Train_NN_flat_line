@@ -40,7 +40,8 @@ load('img_data_divided_4000_5000_tr3.mat');X15=X';y15=y;clear X y;
 y13_avg=round((y13+y14+y15)/3);
 X_all=[X1 X4 X7 X10 X13];y_a=[y1_avg y4_avg y7_avg y10_avg y13_avg];
 clear y1 y2 y3 y4 y5 y6 y7 y8 y9 y10 y11 y12 y13 y14 y15 X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12 X13 X14 X15
-%% Skewness reduction
+
+%% Skewness reduction  % This may be used to reduce percentage of negative examples in the trainset
 % y1=y_a;X1=X_all;
 % yy=find(y_a==1);
 % y_a(yy(1:24055))=[];X_all(:,yy(1:24055))=[];
@@ -98,7 +99,7 @@ for i=100
         end
     end
 end
-% save('Final_out_1_5000_skewed','network','param','perf');
-% save('data_1_5000_skewed','trainset','traintarget','testset','testtarget');
+save('Final_out_1_5000_skewed','network','param','perf');
+save('data_1_5000_skewed','trainset','traintarget','testset','testtarget');
 % save('Final_out_1_5000_non-skewed','network','param','perf');
 % save('data_1_5000_non-skewed','trainset','traintarget','testset','testtarget');
